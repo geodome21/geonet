@@ -16,7 +16,7 @@ function openTab() {
   const tab = document.createElement("div");
   tab.className = "tab";
   tab.id = tabId;
-  tab.innerText = url.replace(/^https?:\/\//, "").split("/")[0]; // Show domain as title
+  tab.innerText = new URL(url).hostname; // Domain as tab title
   tab.onclick = () => switchTab(tabId);
   document.getElementById("tabs").appendChild(tab);
 

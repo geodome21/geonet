@@ -1,22 +1,22 @@
 body {
   margin: 0;
   font-family: "Segoe UI", sans-serif;
-  background: #0f172a;
-  color: white;
+  background: #1e1e2f;
+  color: #fff;
 }
 
-.topbar {
+.browser-bar {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 10px 20px;
-  background: #020617;
-  border-bottom: 1px solid #1e293b;
+  background: #2c2c3f;
+  border-bottom: 1px solid #3a3a5a;
 }
 
 .logo {
-  font-size: 24px;
   font-weight: bold;
+  font-size: 20px;
 }
 
 .controls {
@@ -25,44 +25,62 @@ body {
 }
 
 input {
-  padding: 8px;
+  padding: 6px 10px;
   width: 300px;
   border-radius: 6px;
   border: none;
+  background: #3a3a5a;
+  color: #fff;
+}
+
+input::placeholder {
+  color: #aaa;
 }
 
 button {
-  padding: 8px 12px;
+  padding: 6px 12px;
   border-radius: 6px;
   border: none;
-  background: #2563eb;
-  color: white;
+  background: #5c6cff;
+  color: #fff;
   cursor: pointer;
+}
+
+button:hover {
+  background: #7a82ff;
 }
 
 /* Tabs */
 #tabs {
   display: flex;
-  background: #020617;
-  border-bottom: 1px solid #1e293b;
+  background: #2c2c3f;
+  border-bottom: 1px solid #3a3a5a;
   overflow-x: auto;
 }
 
 .tab {
-  padding: 10px 15px;
+  display: flex;
+  align-items: center;
+  padding: 8px 12px;
+  margin-right: 2px;
   cursor: pointer;
-  background: #0f172a;
-  border-right: 1px solid #1e293b;
-  white-space: nowrap;
+  background: #3a3a5a;
+  border-radius: 6px 6px 0 0;
+  transition: background 0.2s;
+}
+
+.tab:hover {
+  background: #505060;
 }
 
 .tab.active {
-  background: #1e293b;
+  background: #1e1e2f;
+  border-bottom: 2px solid #5c6cff;
 }
 
 /* Frames */
 #frames {
-  height: calc(100vh - 100px);
+  height: calc(100vh - 90px);
   position: relative;
 }
 
@@ -71,6 +89,7 @@ iframe {
   height: 100%;
   border: none;
   display: none;
+  border-radius: 0 0 10px 10px;
 }
 
 iframe.active {
